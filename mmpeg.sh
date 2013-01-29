@@ -1,14 +1,9 @@
 #!/bin/bash
 
 # Audio related
-
 AUD_CODEC=mp3
-
 AUD_BITRATE=64k
-
 AUD_BITRATE=128k
-
- 
 
 # Video related
 VID_CODEC="mpeg4 -vtag XVID"
@@ -30,13 +25,9 @@ VID_LETTERBOX_COLOR="000000" # Color of bars at the top and bottom
 SYS_NUM_THREADS=auto      # Number of processing threads.
 FFMPEG=/usr/bin/ffmpeg
 
- 
-
 ###############################################################################
 ### DON'T EDIT ANYTHING BEYOND THIS POINT #####################################
 ###############################################################################
-
- 
 
 DEINTERLACE=
 [ $VID_INPUT_INTERLACED == 1 ] && DEINTERLACE="-filter:v yadif"
@@ -53,11 +44,7 @@ INPUT=$1
 OUTPUT=${1/.dv/.avi}
 OUTPUT=${OUTPUT////_}
 
- 
-
 echo "Converting $INPUT => $OUTPUT"
-
- 
 
 $FFMPEG -threads $SYS_NUM_THREADS   \
        -f dv                        \
@@ -72,4 +59,3 @@ $FFMPEG -threads $SYS_NUM_THREADS   \
        -qmin 5                      \
        -v info                      \
        /media/003-9VT166/converted/$OUTPUT
-
