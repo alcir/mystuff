@@ -67,4 +67,6 @@ mv ${DBCONF_FILE}.tmp ${DBCONF_FILE}
 
 mv /var/tmp/dcm4chee.web\@3Aservice\@3DWebConfig.xml /export/dcm4chee/server/default/data/xmbean-attrs/
 
+chown -R dcm4chee /export/dcm4chee/*
+
 #svcadm enable dcm4chee
