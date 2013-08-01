@@ -1,4 +1,4 @@
-mystuff
+stuff
 =======
 
-various stuff
+various scripts
