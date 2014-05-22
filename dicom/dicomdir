@@ -1,0 +1,3 @@
+dcmmkdir --output-file DICOMDIR +id . +r
+
+/opt/Mayam/dcm4che-2.0.26/bin/dcmdir -t DICOMDIR
